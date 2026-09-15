@@ -22,33 +22,46 @@ public class TaskServiceTwo implements TaskServiceI {
     }
 
     @Override
-    public List<TaskResponse> getAllTasks() {
+    public List<TaskResponse> getAllTasks(String username) {
         System.out.println("basıldı");
-        return  null;
+        return null;
     }
 
     @Override
-    public TaskResponse createTask(TaskCreateRequest request) {
+    public TaskResponse createTask(
+            TaskCreateRequest request,
+            String username
+    ) {
         TaskEntity taskEntity = new TaskEntity(request.getTitle());
         TaskEntity savedTaskEntity = taskRepository.save(taskEntity);
         return new TaskResponse(savedTaskEntity);
     }
 
     @Override
-    public TaskResponse updateTask(Long id, TaskUpdateRequest request) {
-        Optional<TaskEntity> existingTask = taskRepository.findById(id);
+    public TaskResponse updateTask(
+            Long id,
+            TaskUpdateRequest request,
+            String username
+    ) {
+        Optional<TaskEntity> existingTask =
+                taskRepository.findById(id);
+
         if (existingTask.isPresent()) {
             TaskEntity taskEntity = existingTask.get();
             taskEntity.setTitle(request.getTitle());
             taskEntity.setIsCompleted(request.isCompleted());
-            TaskEntity savedTaskEntity = taskRepository.save(taskEntity);
+
+            TaskEntity savedTaskEntity =
+                    taskRepository.save(taskEntity);
+
             return new TaskResponse(savedTaskEntity);
         }
+
         return null;
     }
 
     @Override
-    public void deleteTask(Long id) {
+    public void deleteTask(Long id, String username) {
         taskRepository.deleteById(id);
     }
 }

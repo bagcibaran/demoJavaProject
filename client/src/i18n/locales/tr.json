@@ -1,0 +1,34 @@
+{
+  "login": {
+    "welcome": "Hoş geldin",
+    "subtitle": "Hesabına giriş yap",
+    "email": "E-posta",
+    "password": "Şifre",
+    "submit": "Giriş yap",
+    "registerPrompt": "Hesabın yok mu?",
+    "registerLink": "Kayıt ol"
+  },
+  "register": {
+    "title": "Hesap oluştur",
+    "subtitle": "Yeni hesabını oluştur",
+    "username": "Kullanıcı adı",
+    "email": "E-posta",
+    "password": "Şifre",
+    "confirmPassword": "Şifre tekrar",
+    "submit": "Kayıt ol",
+    "loginPrompt": "Zaten hesabın var mı?",
+    "loginLink": "Giriş yap",
+    "passwordMismatch": "Şifreler eşleşmiyor"
+  },
+  "dashboard": {
+    "title": "Kontrol Paneli",
+    "welcome": "Hoş geldin",
+    "logout": "Çıkış yap",
+    "tasksTitle": "Görevlerim",
+    "loading": "Yükleniyor...",
+    "empty": "Henüz görevin yok",
+    "loadError": "Görevler yüklenemedi",
+    "newTask": "Yeni görev",
+    "addTask": "Görev ekle"
+  }
+}

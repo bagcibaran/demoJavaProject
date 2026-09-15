@@ -33,16 +33,16 @@ public class AuthService {
     }
 
     public LoginResponse login(LoginRequest request) {
-        Optional<User> existingUser = userRepository.findByUsername(request.getUsername());
+        Optional<User> existingUser = userRepository.findByEmail(request.getEmail());
         if (existingUser.isEmpty()) {
-            throw new UserNotFoundException("Kullanıcı adı veya şifre hatalı");
+            throw new UserNotFoundException("Email veya şifre hatalı");
         }
 
         User user = existingUser.get();
 
         boolean passwordMatches = passwordEncoder.matches(request.getPassword(), user.getPassword());
         if (!passwordMatches) {
-            throw new UserNotFoundException("Kullanıcı adı veya şifre hatalı");
+            throw new UserNotFoundException("Email veya şifre hatalı");
         }
 
         String token = jwtService.generateToken(user.getUsername());

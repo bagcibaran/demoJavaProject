@@ -1,7 +1,12 @@
 package com.project.project.dto;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class TaskUpdateRequest {
+
     private String title;
+
+    @JsonProperty("isCompleted")
     private boolean isCompleted;
 
     public String getTitle() {
@@ -12,10 +17,12 @@ public class TaskUpdateRequest {
         this.title = title;
     }
 
+    @JsonProperty("isCompleted")
     public boolean isCompleted() {
         return isCompleted;
     }
 
+    @JsonProperty("isCompleted")
     public void setCompleted(boolean completed) {
         isCompleted = completed;
     }

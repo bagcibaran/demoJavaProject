@@ -1,11 +1,13 @@
 package com.project.project.dto;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.project.project.entity.TaskEntity;
 
 public class TaskResponse {
 
     private Long id;
     private String title;
+    @JsonProperty("isCompleted")
     private boolean isCompleted;
     private String username;
 
@@ -18,6 +20,7 @@ public class TaskResponse {
         }
     }
 
+    @JsonProperty("isCompleted")
     public boolean isCompleted() {
         return isCompleted;
     }

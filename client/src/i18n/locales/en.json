@@ -1,0 +1,34 @@
+{
+  "login": {
+    "welcome": "Welcome",
+    "subtitle": "Sign in to your account",
+    "email": "Email",
+    "password": "Password",
+    "submit": "Sign in",
+    "registerPrompt": "Don't have an account?",
+    "registerLink": "Register"
+  },
+  "register": {
+    "title": "Create an account",
+    "subtitle": "Create your new account",
+    "username": "Username",
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Confirm password",
+    "submit": "Register",
+    "loginPrompt": "Already have an account?",
+    "loginLink": "Sign in",
+    "passwordMismatch": "Passwords do not match"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "welcome": "Welcome",
+    "logout": "Logout",
+    "tasksTitle": "My Tasks",
+    "loading": "Loading...",
+    "empty": "You have no tasks yet",
+    "loadError": "Tasks could not be loaded",
+    "newTask": "New task",
+    "addTask": "Add task"
+  }
+}
